@@ -28,7 +28,8 @@ public class cal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        display = new javax.swing.JLabel();
+        top_display = new javax.swing.JLabel();
+        bottom_display = new javax.swing.JLabel();
         num_6 = new javax.swing.JButton();
         num_0 = new javax.swing.JButton();
         num_7 = new javax.swing.JButton();
@@ -59,11 +60,15 @@ public class cal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        display.setBackground(new java.awt.Color(0, 0, 0));
-        display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        display.setForeground(new java.awt.Color(25, 255, 25));
-        display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        display.setText("0");
+        top_display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        top_display.setForeground(new java.awt.Color(25, 255, 25));
+        top_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
+        bottom_display.setBackground(new java.awt.Color(0, 0, 0));
+        bottom_display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bottom_display.setForeground(new java.awt.Color(25, 255, 25));
+        bottom_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        bottom_display.setText("0");
 
         num_6.setBackground(new java.awt.Color(25, 255, 25));
         num_6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -252,12 +257,10 @@ public class cal extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 18, Short.MAX_VALUE)
+                        .addGap(0, 54, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,14 +304,21 @@ public class cal extends javax.swing.JFrame {
                                         .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bottom_display, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(top_display, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(60, 60, 60))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(display, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(top_display, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bottom_display, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -339,7 +349,7 @@ public class cal extends javax.swing.JFrame {
                         .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(num_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pos_neg, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -356,7 +366,8 @@ public class cal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    ArrayList display_list= new ArrayList();
+    ArrayList bottom_list= new ArrayList();
+    ArrayList top_list=new ArrayList();
     
     private String toString(ArrayList a_list){
         String str="";
@@ -367,9 +378,9 @@ public class cal extends javax.swing.JFrame {
     }
     
     private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
-        display_list.add("1");
-        String str=toString(display_list);
-        display.setText(str);
+        bottom_list.add("1");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_1ActionPerformed
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
@@ -425,9 +436,13 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_minusActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        display_list.add("+");
-//        display.setText("0");
-        System.out.println(display_list);
+        String str=bottom_display.getText();
+        top_list.add(str);
+        top_list.add("+");
+        top_display.setText(toString(top_list));
+        bottom_display.setText(toString(bottom_list));
+        bottom_list.clear();
+        System.out.println(top_list);
     }//GEN-LAST:event_addActionPerformed
 
     private void decActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decActionPerformed
@@ -435,12 +450,28 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_decActionPerformed
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
-        // TODO add your handling code here:
+        top_list.add(bottom_display.getText());
+        top_list.add("=");
+        top_display.setText(toString(top_list));
+        double total=0;
+        for(Object ob:top_list){
+            if(ob!="+" && ob!="="){
+                double num=Double.parseDouble(ob.toString());
+                total+=num;
+                System.out.println(total);
+            }
+            else if(ob=="="){
+                break;
+            }
+        }
+        bottom_display.setText(String.valueOf(total));
     }//GEN-LAST:event_equalsActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-        display_list.clear();
-        display.setText("0");
+        bottom_list.clear();
+        top_list.clear();
+        top_display.setText("");
+        bottom_display.setText("0");
     }//GEN-LAST:event_clearActionPerformed
 
     /**
@@ -480,9 +511,9 @@ public class cal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
+    private javax.swing.JLabel bottom_display;
     private javax.swing.JButton clear;
     private javax.swing.JButton dec;
-    private javax.swing.JLabel display;
     private javax.swing.JButton div;
     private javax.swing.JButton equals;
     private javax.swing.JPanel jPanel1;
@@ -499,5 +530,6 @@ public class cal extends javax.swing.JFrame {
     private javax.swing.JButton num_8;
     private javax.swing.JButton num_9;
     private javax.swing.JButton pos_neg;
+    private javax.swing.JLabel top_display;
     // End of variables declaration//GEN-END:variables
 }
