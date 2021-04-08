@@ -48,7 +48,7 @@ public class cal extends javax.swing.JFrame {
         dec = new javax.swing.JButton();
         num_5 = new javax.swing.JButton();
         equals = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Swing Calculator");
@@ -296,11 +296,11 @@ public class cal extends javax.swing.JFrame {
         });
         jPanel1.add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 258, 130, 41));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(getPreferredSize());
-        jLabel1.setMinimumSize(getPreferredSize());
-        jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
+        background.setMaximumSize(getPreferredSize());
+        background.setMinimumSize(getPreferredSize());
+        background.setOpaque(true);
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -483,12 +483,12 @@ public class cal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
+    private javax.swing.JLabel background;
     private javax.swing.JLabel bottom_display;
     private javax.swing.JButton clear;
     private javax.swing.JButton dec;
     private javax.swing.JButton div;
     private javax.swing.JButton equals;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton minus;
     private javax.swing.JButton mult;
