@@ -392,39 +392,57 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_pos_negActionPerformed
 
     private void num_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_0ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("0");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_0ActionPerformed
 
     private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("2");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_2ActionPerformed
 
     private void num_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_4ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("4");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_4ActionPerformed
 
     private void num_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_3ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("3");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_3ActionPerformed
 
     private void num_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_5ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("5");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_5ActionPerformed
 
     private void num_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_6ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("6");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_6ActionPerformed
 
     private void num_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_7ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("7");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_7ActionPerformed
 
     private void num_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_8ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("8");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_8ActionPerformed
 
     private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add("9");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_num_9ActionPerformed
 
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
