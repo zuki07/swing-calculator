@@ -437,6 +437,7 @@ public class cal extends javax.swing.JFrame {
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         String str=bottom_display.getText();
+        top_list.clear();
         top_list.add(str);
         top_list.add("+");
         top_display.setText(toString(top_list));
@@ -446,7 +447,9 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_addActionPerformed
 
     private void decActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decActionPerformed
-        // TODO add your handling code here:
+        bottom_list.add(".");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
     }//GEN-LAST:event_decActionPerformed
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
@@ -458,13 +461,14 @@ public class cal extends javax.swing.JFrame {
             if(ob!="+" && ob!="="){
                 double num=Double.parseDouble(ob.toString());
                 total+=num;
-                System.out.println(total);
             }
             else if(ob=="="){
                 break;
             }
         }
-        bottom_display.setText(String.valueOf(total));
+        bottom_list.clear();
+        bottom_list.add(total);
+        bottom_display.setText(toString(bottom_list));
     }//GEN-LAST:event_equalsActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
