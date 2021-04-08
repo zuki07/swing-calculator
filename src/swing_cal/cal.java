@@ -27,7 +27,6 @@ public class cal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         top_display = new javax.swing.JLabel();
         bottom_display = new javax.swing.JLabel();
@@ -49,6 +48,7 @@ public class cal extends javax.swing.JFrame {
         dec = new javax.swing.JButton();
         num_5 = new javax.swing.JButton();
         equals = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Swing Calculator");
@@ -56,18 +56,12 @@ public class cal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(750, 400));
-        setPreferredSize(new java.awt.Dimension(450, 400));
         setResizable(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(getPreferredSize());
-        jLabel1.setMinimumSize(getPreferredSize());
-        jLabel1.setPreferredSize(new java.awt.Dimension(450, 400));
-
-        jPanel1.setBackground(null);
-        jPanel1.setForeground(null);
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setFocusable(false);
         jPanel1.setOpaque(false);
+        jPanel1.setPreferredSize(new java.awt.Dimension(450, 400));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         top_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
@@ -302,19 +296,21 @@ public class cal extends javax.swing.JFrame {
         });
         jPanel1.add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 258, 130, 41));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
+        jLabel1.setMaximumSize(getPreferredSize());
+        jLabel1.setMinimumSize(getPreferredSize());
+        jLabel1.setOpaque(true);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
