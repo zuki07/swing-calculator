@@ -48,30 +48,38 @@ public class cal extends javax.swing.JFrame {
         dec = new javax.swing.JButton();
         num_5 = new javax.swing.JButton();
         equals = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Swing Calculator");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocation(new java.awt.Point(500, 500));
-        setLocationByPlatform(true);
+        setLocation(new java.awt.Point(750, 400));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setFocusable(false);
+        jPanel1.setOpaque(false);
+        jPanel1.setPreferredSize(new java.awt.Dimension(450, 400));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        top_display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        top_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
         top_display.setForeground(new java.awt.Color(25, 255, 25));
         top_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jPanel1.add(top_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 20, 338, 40));
 
         bottom_display.setBackground(new java.awt.Color(0, 0, 0));
-        bottom_display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bottom_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
         bottom_display.setForeground(new java.awt.Color(25, 255, 25));
         bottom_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bottom_display.setText("0");
+        bottom_display.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jPanel1.add(bottom_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 70, 338, 40));
 
-        num_6.setBackground(new java.awt.Color(25, 255, 25));
-        num_6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_6.setBackground(new java.awt.Color(0, 0, 0));
+        num_6.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_6.setForeground(new java.awt.Color(25, 255, 25));
         num_6.setText("6");
         num_6.setBorderPainted(false);
         num_6.addActionListener(new java.awt.event.ActionListener() {
@@ -79,9 +87,11 @@ public class cal extends javax.swing.JFrame {
                 num_6ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 166, 60, 40));
 
-        num_0.setBackground(new java.awt.Color(25, 255, 25));
-        num_0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_0.setBackground(new java.awt.Color(0, 0, 0));
+        num_0.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_0.setForeground(new java.awt.Color(25, 255, 25));
         num_0.setText("0");
         num_0.setBorderPainted(false);
         num_0.addActionListener(new java.awt.event.ActionListener() {
@@ -89,9 +99,11 @@ public class cal extends javax.swing.JFrame {
                 num_0ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 258, 60, 40));
 
-        num_7.setBackground(new java.awt.Color(25, 255, 25));
-        num_7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_7.setBackground(new java.awt.Color(0, 0, 0));
+        num_7.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_7.setForeground(new java.awt.Color(25, 255, 25));
         num_7.setText("7");
         num_7.setBorderPainted(false);
         num_7.addActionListener(new java.awt.event.ActionListener() {
@@ -99,9 +111,11 @@ public class cal extends javax.swing.JFrame {
                 num_7ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 120, 60, 40));
 
-        clear.setBackground(new java.awt.Color(25, 255, 25));
-        clear.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        clear.setBackground(new java.awt.Color(0, 0, 0));
+        clear.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        clear.setForeground(new java.awt.Color(25, 255, 25));
         clear.setText("C");
         clear.setBorderPainted(false);
         clear.addActionListener(new java.awt.event.ActionListener() {
@@ -109,9 +123,11 @@ public class cal extends javax.swing.JFrame {
                 clearActionPerformed(evt);
             }
         });
+        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 130, 40));
 
-        num_8.setBackground(new java.awt.Color(25, 255, 25));
-        num_8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_8.setBackground(new java.awt.Color(0, 0, 0));
+        num_8.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_8.setForeground(new java.awt.Color(25, 255, 25));
         num_8.setText("8");
         num_8.setBorderPainted(false);
         num_8.addActionListener(new java.awt.event.ActionListener() {
@@ -119,9 +135,11 @@ public class cal extends javax.swing.JFrame {
                 num_8ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 60, 40));
 
-        num_9.setBackground(new java.awt.Color(25, 255, 25));
-        num_9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_9.setBackground(new java.awt.Color(0, 0, 0));
+        num_9.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_9.setForeground(new java.awt.Color(25, 255, 25));
         num_9.setText("9");
         num_9.setBorderPainted(false);
         num_9.addActionListener(new java.awt.event.ActionListener() {
@@ -129,9 +147,11 @@ public class cal extends javax.swing.JFrame {
                 num_9ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 120, 60, 40));
 
-        div.setBackground(new java.awt.Color(25, 255, 25));
-        div.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        div.setBackground(new java.awt.Color(0, 0, 0));
+        div.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        div.setForeground(new java.awt.Color(25, 255, 25));
         div.setText("/");
         div.setBorderPainted(false);
         div.setMaximumSize(new java.awt.Dimension(45, 31));
@@ -142,9 +162,11 @@ public class cal extends javax.swing.JFrame {
                 divActionPerformed(evt);
             }
         });
+        jPanel1.add(div, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 212, 60, 40));
 
-        mult.setBackground(new java.awt.Color(25, 255, 25));
-        mult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mult.setBackground(new java.awt.Color(0, 0, 0));
+        mult.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        mult.setForeground(new java.awt.Color(25, 255, 25));
         mult.setText("X");
         mult.setBorderPainted(false);
         mult.addActionListener(new java.awt.event.ActionListener() {
@@ -152,9 +174,11 @@ public class cal extends javax.swing.JFrame {
                 multActionPerformed(evt);
             }
         });
+        jPanel1.add(mult, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 166, 60, 40));
 
-        num_1.setBackground(new java.awt.Color(25, 255, 25));
-        num_1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_1.setBackground(new java.awt.Color(0, 0, 0));
+        num_1.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_1.setForeground(new java.awt.Color(25, 255, 25));
         num_1.setText("1");
         num_1.setBorderPainted(false);
         num_1.addActionListener(new java.awt.event.ActionListener() {
@@ -162,9 +186,11 @@ public class cal extends javax.swing.JFrame {
                 num_1ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 212, 60, 40));
 
-        minus.setBackground(new java.awt.Color(25, 255, 25));
-        minus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        minus.setBackground(new java.awt.Color(0, 0, 0));
+        minus.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        minus.setForeground(new java.awt.Color(25, 255, 25));
         minus.setText("-");
         minus.setBorderPainted(false);
         minus.addActionListener(new java.awt.event.ActionListener() {
@@ -172,9 +198,11 @@ public class cal extends javax.swing.JFrame {
                 minusActionPerformed(evt);
             }
         });
+        jPanel1.add(minus, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 166, 60, 40));
 
-        num_2.setBackground(new java.awt.Color(25, 255, 25));
-        num_2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_2.setBackground(new java.awt.Color(0, 0, 0));
+        num_2.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_2.setForeground(new java.awt.Color(25, 255, 25));
         num_2.setText("2");
         num_2.setBorderPainted(false);
         num_2.addActionListener(new java.awt.event.ActionListener() {
@@ -182,9 +210,11 @@ public class cal extends javax.swing.JFrame {
                 num_2ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 212, 60, 40));
 
-        add.setBackground(new java.awt.Color(25, 255, 25));
-        add.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        add.setBackground(new java.awt.Color(0, 0, 0));
+        add.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        add.setForeground(new java.awt.Color(25, 255, 25));
         add.setText("+");
         add.setBorderPainted(false);
         add.addActionListener(new java.awt.event.ActionListener() {
@@ -192,9 +222,11 @@ public class cal extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 212, 60, 40));
 
-        num_3.setBackground(new java.awt.Color(25, 255, 25));
-        num_3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_3.setBackground(new java.awt.Color(0, 0, 0));
+        num_3.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_3.setForeground(new java.awt.Color(25, 255, 25));
         num_3.setText("3");
         num_3.setBorderPainted(false);
         num_3.addActionListener(new java.awt.event.ActionListener() {
@@ -202,9 +234,11 @@ public class cal extends javax.swing.JFrame {
                 num_3ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 212, 60, 40));
 
-        pos_neg.setBackground(new java.awt.Color(25, 255, 25));
-        pos_neg.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        pos_neg.setBackground(new java.awt.Color(0, 0, 0));
+        pos_neg.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        pos_neg.setForeground(new java.awt.Color(25, 255, 25));
         pos_neg.setText("+/-");
         pos_neg.setBorderPainted(false);
         pos_neg.addActionListener(new java.awt.event.ActionListener() {
@@ -212,9 +246,11 @@ public class cal extends javax.swing.JFrame {
                 pos_negActionPerformed(evt);
             }
         });
+        jPanel1.add(pos_neg, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 258, 60, 40));
 
-        num_4.setBackground(new java.awt.Color(25, 255, 25));
-        num_4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_4.setBackground(new java.awt.Color(0, 0, 0));
+        num_4.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_4.setForeground(new java.awt.Color(25, 255, 25));
         num_4.setText("4");
         num_4.setBorderPainted(false);
         num_4.addActionListener(new java.awt.event.ActionListener() {
@@ -222,9 +258,11 @@ public class cal extends javax.swing.JFrame {
                 num_4ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 166, 60, 40));
 
-        dec.setBackground(new java.awt.Color(25, 255, 25));
-        dec.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dec.setBackground(new java.awt.Color(0, 0, 0));
+        dec.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        dec.setForeground(new java.awt.Color(25, 255, 25));
         dec.setText(".");
         dec.setBorderPainted(false);
         dec.addActionListener(new java.awt.event.ActionListener() {
@@ -232,9 +270,11 @@ public class cal extends javax.swing.JFrame {
                 decActionPerformed(evt);
             }
         });
+        jPanel1.add(dec, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 258, 60, 40));
 
-        num_5.setBackground(new java.awt.Color(25, 255, 25));
-        num_5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        num_5.setBackground(new java.awt.Color(0, 0, 0));
+        num_5.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        num_5.setForeground(new java.awt.Color(25, 255, 25));
         num_5.setText("5");
         num_5.setBorderPainted(false);
         num_5.addActionListener(new java.awt.event.ActionListener() {
@@ -242,9 +282,11 @@ public class cal extends javax.swing.JFrame {
                 num_5ActionPerformed(evt);
             }
         });
+        jPanel1.add(num_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 166, 60, 40));
 
-        equals.setBackground(new java.awt.Color(25, 255, 25));
-        equals.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        equals.setBackground(new java.awt.Color(0, 0, 0));
+        equals.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
+        equals.setForeground(new java.awt.Color(25, 255, 25));
         equals.setText("=");
         equals.setBorderPainted(false);
         equals.addActionListener(new java.awt.event.ActionListener() {
@@ -252,223 +294,27 @@ public class cal extends javax.swing.JFrame {
                 equalsActionPerformed(evt);
             }
         });
+        jPanel1.add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 258, 130, 41));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 54, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(num_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(14, 14, 14))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(num_4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(mult, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(pos_neg, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_0, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(dec, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(num_1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num_3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(14, 14, 14)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bottom_display, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(top_display, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(60, 60, 60))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(top_display, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bottom_display, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(num_9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(num_7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(num_8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(num_5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(num_4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(num_6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mult, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(num_3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(num_2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(num_1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(dec, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(num_0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pos_neg, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(62, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
+        jLabel1.setMaximumSize(getPreferredSize());
+        jLabel1.setMinimumSize(getPreferredSize());
+        jLabel1.setOpaque(true);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    ArrayList bottom_list= new ArrayList();
-    ArrayList top_list=new ArrayList();
-    
-    private String toString(ArrayList a_list){
-        String str="";
-        for(int index=0; index<a_list.size(); index++){
-            str=str+a_list.get(index).toString();
-        }
-        return str;
-    }
-    
-    private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
-        bottom_list.add("1");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_1ActionPerformed
-
-    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_divActionPerformed
-
-    private void pos_negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pos_negActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pos_negActionPerformed
-
-    private void num_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_0ActionPerformed
-        bottom_list.add("0");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_0ActionPerformed
-
-    private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
-        bottom_list.add("2");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_2ActionPerformed
-
-    private void num_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_4ActionPerformed
-        bottom_list.add("4");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_4ActionPerformed
-
-    private void num_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_3ActionPerformed
-        bottom_list.add("3");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_3ActionPerformed
-
-    private void num_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_5ActionPerformed
-        bottom_list.add("5");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_5ActionPerformed
-
-    private void num_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_6ActionPerformed
-        bottom_list.add("6");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_6ActionPerformed
-
-    private void num_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_7ActionPerformed
-        bottom_list.add("7");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_7ActionPerformed
-
-    private void num_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_8ActionPerformed
-        bottom_list.add("8");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_8ActionPerformed
-
-    private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
-        bottom_list.add("9");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_9ActionPerformed
-
-    private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_multActionPerformed
-
-    private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_minusActionPerformed
-
-    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        String str=bottom_display.getText();
-        top_list.clear();
-        top_list.add(str);
-        top_list.add("+");
-        top_display.setText(toString(top_list));
-        bottom_display.setText(toString(bottom_list));
-        bottom_list.clear();
-        System.out.println(top_list);
-    }//GEN-LAST:event_addActionPerformed
-
-    private void decActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decActionPerformed
-        bottom_list.add(".");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_decActionPerformed
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
         top_list.add(bottom_display.getText());
@@ -489,6 +335,81 @@ public class cal extends javax.swing.JFrame {
         bottom_display.setText(toString(bottom_list));
     }//GEN-LAST:event_equalsActionPerformed
 
+    private void num_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_5ActionPerformed
+        bottom_list.add("5");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_5ActionPerformed
+
+    private void decActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decActionPerformed
+        bottom_list.add(".");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_decActionPerformed
+
+    private void num_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_4ActionPerformed
+        bottom_list.add("4");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_4ActionPerformed
+
+    private void pos_negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pos_negActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pos_negActionPerformed
+
+    private void num_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_3ActionPerformed
+        bottom_list.add("3");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_3ActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        String str=bottom_display.getText();
+        top_list.clear();
+        top_list.add(str);
+        top_list.add("+");
+        top_display.setText(toString(top_list));
+        bottom_display.setText(toString(bottom_list));
+        bottom_list.clear();
+        System.out.println(top_list);
+    }//GEN-LAST:event_addActionPerformed
+
+    private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
+        bottom_list.add("2");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_2ActionPerformed
+
+    private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_minusActionPerformed
+
+    private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
+        bottom_list.add("1");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_1ActionPerformed
+
+    private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_multActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_divActionPerformed
+
+    private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
+        bottom_list.add("9");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_9ActionPerformed
+
+    private void num_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_8ActionPerformed
+        bottom_list.add("8");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_8ActionPerformed
+
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         bottom_list.clear();
         top_list.clear();
@@ -496,6 +417,35 @@ public class cal extends javax.swing.JFrame {
         bottom_display.setText("0");
     }//GEN-LAST:event_clearActionPerformed
 
+    private void num_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_7ActionPerformed
+        bottom_list.add("7");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_7ActionPerformed
+
+    private void num_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_0ActionPerformed
+        bottom_list.add("0");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_0ActionPerformed
+
+    private void num_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_6ActionPerformed
+        bottom_list.add("6");
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }//GEN-LAST:event_num_6ActionPerformed
+
+    ArrayList bottom_list= new ArrayList();
+    ArrayList top_list=new ArrayList();
+    
+    private String toString(ArrayList a_list){
+        String str="";
+        for(int index=0; index<a_list.size(); index++){
+            str=str+a_list.get(index).toString();
+        }
+        return str;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -538,6 +488,7 @@ public class cal extends javax.swing.JFrame {
     private javax.swing.JButton dec;
     private javax.swing.JButton div;
     private javax.swing.JButton equals;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton minus;
     private javax.swing.JButton mult;
