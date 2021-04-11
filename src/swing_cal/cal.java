@@ -317,22 +317,7 @@ public class cal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
-        top_list.add(bottom_display.getText());
-        top_list.add("=");
-        top_display.setText(toString(top_list));
-        double total=0;
-        for(Object ob:top_list){
-            if(ob!="+" && ob!="="){
-                double num=Double.parseDouble(ob.toString());
-                total+=num;
-            }
-            else if(ob=="="){
-                break;
-            }
-        }
-        bottom_list.clear();
-        bottom_list.add(total);
-        bottom_display.setText(toString(bottom_list));
+        equals("=");
     }//GEN-LAST:event_equalsActionPerformed
 
     private void num_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_5ActionPerformed
@@ -364,14 +349,17 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_num_3ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        String str=bottom_display.getText();
-        top_list.clear();
-        top_list.add(str);
-        top_list.add("+");
-        top_display.setText(toString(top_list));
-        bottom_display.setText(toString(bottom_list));
-        bottom_list.clear();
-        System.out.println(top_list);
+        if(top_list.size()<2){
+            commandOperator("+");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("+");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_addActionPerformed
 
     private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
@@ -381,7 +369,17 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_num_2ActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
-        // TODO add your handling code here:
+        if(top_list.size()<2){
+            commandOperator("-");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("-");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_minusActionPerformed
 
     private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
@@ -391,11 +389,31 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_num_1ActionPerformed
 
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
-        // TODO add your handling code here:
+        if(top_list.size()<2){
+            commandOperator("*");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("*");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_multActionPerformed
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
-        // TODO add your handling code here:
+        if(top_list.size()<2){
+            commandOperator("/");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("/");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_divActionPerformed
 
     private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
@@ -437,6 +455,49 @@ public class cal extends javax.swing.JFrame {
 
     ArrayList bottom_list= new ArrayList();
     ArrayList top_list=new ArrayList();
+    
+    private void commandOperator(String comm){
+        String str=bottom_display.getText();
+        top_list.clear();
+        top_list.add(str);
+        top_list.add(comm);
+        top_display.setText(toString(top_list));
+        bottom_display.setText(toString(bottom_list));
+        bottom_list.clear();
+    }
+    
+    private void equals(String equal_symbol){
+        top_list.add(bottom_display.getText());
+        top_list.add(equal_symbol);
+        top_display.setText(toString(top_list));
+        double total=Double.parseDouble(top_list.get(0).toString());
+        OUTER:
+        if(equal_symbol.equals("=")){
+            for (int index = 1; index<top_list.size(); index++) {
+                switch (top_list.get(index).toString()) {
+                    case "+":
+                        total+=Double.parseDouble(top_list.get(index+1).toString());
+                        break;
+                    case "-":
+                        total-=Double.parseDouble(top_list.get(index+1).toString());
+                        break;
+                    case "*":
+                        total*=Double.parseDouble(top_list.get(index+1).toString());
+                        break;
+                    case "/":
+                        total/=Double.parseDouble(top_list.get(index+1).toString());
+                        break;
+                    case "=":
+                        break OUTER;
+                    default:
+                        break;
+                }
+            }
+        }
+        bottom_list.clear();
+        bottom_list.add(total);
+        bottom_display.setText(toString(bottom_list));
+    }
     
     private String toString(ArrayList a_list){
         String str="";
