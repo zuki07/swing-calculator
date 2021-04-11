@@ -3,6 +3,8 @@
  */
 package swing_cal;
 
+import java.awt.event.KeyListener;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 /**
@@ -67,6 +69,7 @@ public class cal extends javax.swing.JFrame {
         top_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
         top_display.setForeground(new java.awt.Color(25, 255, 25));
         top_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        top_display.setFocusable(false);
         jPanel1.add(top_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 20, 338, 40));
 
         bottom_display.setBackground(new java.awt.Color(0, 0, 0));
@@ -74,6 +77,7 @@ public class cal extends javax.swing.JFrame {
         bottom_display.setForeground(new java.awt.Color(25, 255, 25));
         bottom_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         bottom_display.setText("0");
+        bottom_display.setFocusable(false);
         bottom_display.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jPanel1.add(bottom_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 70, 338, 40));
 
@@ -82,9 +86,10 @@ public class cal extends javax.swing.JFrame {
         num_6.setForeground(new java.awt.Color(25, 255, 25));
         num_6.setText("6");
         num_6.setBorderPainted(false);
+        num_6.setFocusable(false);
         num_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_6ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 166, 60, 40));
@@ -94,9 +99,10 @@ public class cal extends javax.swing.JFrame {
         num_0.setForeground(new java.awt.Color(25, 255, 25));
         num_0.setText("0");
         num_0.setBorderPainted(false);
+        num_0.setFocusable(false);
         num_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_0ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 258, 60, 40));
@@ -106,9 +112,10 @@ public class cal extends javax.swing.JFrame {
         num_7.setForeground(new java.awt.Color(25, 255, 25));
         num_7.setText("7");
         num_7.setBorderPainted(false);
+        num_7.setFocusable(false);
         num_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_7ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 120, 60, 40));
@@ -118,6 +125,7 @@ public class cal extends javax.swing.JFrame {
         clear.setForeground(new java.awt.Color(25, 255, 25));
         clear.setText("C");
         clear.setBorderPainted(false);
+        clear.setFocusable(false);
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearActionPerformed(evt);
@@ -130,9 +138,10 @@ public class cal extends javax.swing.JFrame {
         num_8.setForeground(new java.awt.Color(25, 255, 25));
         num_8.setText("8");
         num_8.setBorderPainted(false);
+        num_8.setFocusable(false);
         num_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_8ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 60, 40));
@@ -142,9 +151,10 @@ public class cal extends javax.swing.JFrame {
         num_9.setForeground(new java.awt.Color(25, 255, 25));
         num_9.setText("9");
         num_9.setBorderPainted(false);
+        num_9.setFocusable(false);
         num_9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_9ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 120, 60, 40));
@@ -154,6 +164,7 @@ public class cal extends javax.swing.JFrame {
         div.setForeground(new java.awt.Color(25, 255, 25));
         div.setText("/");
         div.setBorderPainted(false);
+        div.setFocusable(false);
         div.setMaximumSize(new java.awt.Dimension(45, 31));
         div.setMinimumSize(new java.awt.Dimension(45, 31));
         div.setPreferredSize(new java.awt.Dimension(45, 31));
@@ -169,6 +180,7 @@ public class cal extends javax.swing.JFrame {
         mult.setForeground(new java.awt.Color(25, 255, 25));
         mult.setText("X");
         mult.setBorderPainted(false);
+        mult.setFocusable(false);
         mult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multActionPerformed(evt);
@@ -181,9 +193,10 @@ public class cal extends javax.swing.JFrame {
         num_1.setForeground(new java.awt.Color(25, 255, 25));
         num_1.setText("1");
         num_1.setBorderPainted(false);
+        num_1.setFocusable(false);
         num_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_1ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 212, 60, 40));
@@ -193,6 +206,7 @@ public class cal extends javax.swing.JFrame {
         minus.setForeground(new java.awt.Color(25, 255, 25));
         minus.setText("-");
         minus.setBorderPainted(false);
+        minus.setFocusable(false);
         minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 minusActionPerformed(evt);
@@ -205,9 +219,10 @@ public class cal extends javax.swing.JFrame {
         num_2.setForeground(new java.awt.Color(25, 255, 25));
         num_2.setText("2");
         num_2.setBorderPainted(false);
+        num_2.setFocusable(false);
         num_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_2ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 212, 60, 40));
@@ -217,6 +232,7 @@ public class cal extends javax.swing.JFrame {
         add.setForeground(new java.awt.Color(25, 255, 25));
         add.setText("+");
         add.setBorderPainted(false);
+        add.setFocusable(false);
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addActionPerformed(evt);
@@ -229,9 +245,10 @@ public class cal extends javax.swing.JFrame {
         num_3.setForeground(new java.awt.Color(25, 255, 25));
         num_3.setText("3");
         num_3.setBorderPainted(false);
+        num_3.setFocusable(false);
         num_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_3ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 212, 60, 40));
@@ -241,6 +258,7 @@ public class cal extends javax.swing.JFrame {
         pos_neg.setForeground(new java.awt.Color(25, 255, 25));
         pos_neg.setText("+/-");
         pos_neg.setBorderPainted(false);
+        pos_neg.setFocusable(false);
         pos_neg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pos_negActionPerformed(evt);
@@ -253,9 +271,10 @@ public class cal extends javax.swing.JFrame {
         num_4.setForeground(new java.awt.Color(25, 255, 25));
         num_4.setText("4");
         num_4.setBorderPainted(false);
+        num_4.setFocusable(false);
         num_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_4ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 166, 60, 40));
@@ -265,9 +284,10 @@ public class cal extends javax.swing.JFrame {
         dec.setForeground(new java.awt.Color(25, 255, 25));
         dec.setText(".");
         dec.setBorderPainted(false);
+        dec.setFocusable(false);
         dec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(dec, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 258, 60, 40));
@@ -277,9 +297,10 @@ public class cal extends javax.swing.JFrame {
         num_5.setForeground(new java.awt.Color(25, 255, 25));
         num_5.setText("5");
         num_5.setBorderPainted(false);
+        num_5.setFocusable(false);
         num_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_5ActionPerformed(evt);
+                numActionPerformed(evt);
             }
         });
         jPanel1.add(num_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 166, 60, 40));
@@ -289,6 +310,7 @@ public class cal extends javax.swing.JFrame {
         equals.setForeground(new java.awt.Color(25, 255, 25));
         equals.setText("=");
         equals.setBorderPainted(false);
+        equals.setFocusable(false);
         equals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 equalsActionPerformed(evt);
@@ -300,6 +322,11 @@ public class cal extends javax.swing.JFrame {
         background.setMaximumSize(getPreferredSize());
         background.setMinimumSize(getPreferredSize());
         background.setOpaque(true);
+        background.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                backgroundKeyTyped(evt);
+            }
+        });
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -317,43 +344,19 @@ public class cal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
-        equals("=");
+        equals();
     }//GEN-LAST:event_equalsActionPerformed
-
-    private void num_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_5ActionPerformed
-        bottom_list.add("5");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_5ActionPerformed
-
-    private void decActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decActionPerformed
-        bottom_list.add(".");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_decActionPerformed
-
-    private void num_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_4ActionPerformed
-        bottom_list.add("4");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_4ActionPerformed
 
     private void pos_negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pos_negActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pos_negActionPerformed
-
-    private void num_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_3ActionPerformed
-        bottom_list.add("3");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_3ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         if(top_list.size()<2){
             commandOperator("+");
         }
         else if (top_list.size()>1){
-            equals("=");
+            equals();
             bottom_list.clear();
             top_list.clear();
             top_list.add(bottom_display.getText());
@@ -362,18 +365,12 @@ public class cal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addActionPerformed
 
-    private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
-        bottom_list.add("2");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_2ActionPerformed
-
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
         if(top_list.size()<2){
             commandOperator("-");
         }
         else if (top_list.size()>1){
-            equals("=");
+            equals();
             bottom_list.clear();
             top_list.clear();
             top_list.add(bottom_display.getText());
@@ -382,18 +379,12 @@ public class cal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_minusActionPerformed
 
-    private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
-        bottom_list.add("1");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_1ActionPerformed
-
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
         if(top_list.size()<2){
             commandOperator("*");
         }
         else if (top_list.size()>1){
-            equals("=");
+            equals();
             bottom_list.clear();
             top_list.clear();
             top_list.add(bottom_display.getText());
@@ -407,7 +398,7 @@ public class cal extends javax.swing.JFrame {
             commandOperator("/");
         }
         else if (top_list.size()>1){
-            equals("=");
+            equals();
             bottom_list.clear();
             top_list.clear();
             top_list.add(bottom_display.getText());
@@ -416,18 +407,6 @@ public class cal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_divActionPerformed
 
-    private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
-        bottom_list.add("9");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_9ActionPerformed
-
-    private void num_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_8ActionPerformed
-        bottom_list.add("8");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_8ActionPerformed
-
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         bottom_list.clear();
         top_list.clear();
@@ -435,23 +414,56 @@ public class cal extends javax.swing.JFrame {
         bottom_display.setText("0");
     }//GEN-LAST:event_clearActionPerformed
 
-    private void num_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_7ActionPerformed
-        bottom_list.add("7");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_7ActionPerformed
+    private void backgroundKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_backgroundKeyTyped
+        int key=evt.getKeyCode();
+        System.out.println(key);
+    }//GEN-LAST:event_backgroundKeyTyped
 
-    private void num_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_0ActionPerformed
-        bottom_list.add("0");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_0ActionPerformed
-
-    private void num_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_6ActionPerformed
-        bottom_list.add("6");
-        String str=toString(bottom_list);
-        bottom_display.setText(str);
-    }//GEN-LAST:event_num_6ActionPerformed
+    private void numActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformed
+        Object button_pressed=evt.getSource();      //get full source of button event
+        String str=button_pressed.toString();
+        String[] split = str.split(",");            //split string at commas and append to string array
+//        int count=0;
+//        for(String st:split){
+//            System.out.println(st);
+//        }
+//        System.out.println(split[25]);
+        switch (split[25]){                         //at index 25 is  the value of button text
+            case "text=1":
+                todoCommand("1");
+                break;
+            case "text=2":
+                todoCommand("2");
+                break;
+            case "text=3":
+                todoCommand("3");
+                break;
+            case "text=4":
+                todoCommand("4");
+                break;
+            case "text=5":
+                todoCommand("5");
+                break;    
+            case "text=6":
+                todoCommand("6");
+                break; 
+            case "text=7":
+                todoCommand("7");
+                break;    
+            case "text=8":
+                todoCommand("8");
+                break;    
+            case "text=9":
+                todoCommand("9");
+                break;    
+            case "text=0":
+                todoCommand("0");
+                break;  
+            case "text=.":
+                todoCommand(".");
+        }
+        
+    }//GEN-LAST:event_numActionPerformed
 
     ArrayList bottom_list= new ArrayList();
     ArrayList top_list=new ArrayList();
@@ -466,32 +478,36 @@ public class cal extends javax.swing.JFrame {
         bottom_list.clear();
     }
     
-    private void equals(String equal_symbol){
+    private void todoCommand(String command_str){
+        bottom_list.add(command_str);
+        String str=toString(bottom_list);
+        bottom_display.setText(str);
+    }
+    
+    private void equals(){
         top_list.add(bottom_display.getText());
-        top_list.add(equal_symbol);
+        top_list.add("=");
         top_display.setText(toString(top_list));
         double total=Double.parseDouble(top_list.get(0).toString());
         OUTER:
-        if(equal_symbol.equals("=")){
-            for (int index = 1; index<top_list.size(); index++) {
-                switch (top_list.get(index).toString()) {
-                    case "+":
-                        total+=Double.parseDouble(top_list.get(index+1).toString());
-                        break;
-                    case "-":
-                        total-=Double.parseDouble(top_list.get(index+1).toString());
-                        break;
-                    case "*":
-                        total*=Double.parseDouble(top_list.get(index+1).toString());
-                        break;
-                    case "/":
-                        total/=Double.parseDouble(top_list.get(index+1).toString());
-                        break;
-                    case "=":
-                        break OUTER;
-                    default:
-                        break;
-                }
+        for (int index = 1; index<top_list.size(); index++) {
+            switch (top_list.get(index).toString()) {
+                case "+":
+                    total+=Double.parseDouble(top_list.get(index+1).toString());
+                    break;
+                case "-":
+                    total-=Double.parseDouble(top_list.get(index+1).toString());
+                    break;
+                case "*":
+                    total*=Double.parseDouble(top_list.get(index+1).toString());
+                    break;
+                case "/":
+                    total/=Double.parseDouble(top_list.get(index+1).toString());
+                    break;
+                case "=":
+                    break OUTER;
+                default:
+                    break;
             }
         }
         bottom_list.clear();
@@ -506,6 +522,7 @@ public class cal extends javax.swing.JFrame {
         }
         return str;
     }
+    
     
     /**
      * @param args the command line arguments
@@ -540,6 +557,8 @@ public class cal extends javax.swing.JFrame {
                 new cal().setVisible(true);
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -567,3 +586,5 @@ public class cal extends javax.swing.JFrame {
     private javax.swing.JLabel top_display;
     // End of variables declaration//GEN-END:variables
 }
+
+
