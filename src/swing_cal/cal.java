@@ -349,8 +349,17 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_num_3ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        commandOperator("+");
-//        equals("=");
+        if(top_list.size()<2){
+            commandOperator("+");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("+");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_addActionPerformed
 
     private void num_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_2ActionPerformed
@@ -360,7 +369,17 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_num_2ActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
-        commandOperator("-");
+        if(top_list.size()<2){
+            commandOperator("-");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("-");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_minusActionPerformed
 
     private void num_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_1ActionPerformed
@@ -370,11 +389,31 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_num_1ActionPerformed
 
     private void multActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multActionPerformed
-        commandOperator("*");
+        if(top_list.size()<2){
+            commandOperator("*");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("*");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_multActionPerformed
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
-        commandOperator("/");
+        if(top_list.size()<2){
+            commandOperator("/");
+        }
+        else if (top_list.size()>1){
+            equals("=");
+            bottom_list.clear();
+            top_list.clear();
+            top_list.add(bottom_display.getText());
+            top_list.add("/");
+            top_display.setText(toString(top_list));
+        }
     }//GEN-LAST:event_divActionPerformed
 
     private void num_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_9ActionPerformed
