@@ -343,6 +343,9 @@ public class cal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ArrayList bottom_list= new ArrayList();
+    ArrayList top_list=new ArrayList();
+    
     private void equalsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsActionPerformed
         equals();
     }//GEN-LAST:event_equalsActionPerformed
@@ -465,9 +468,6 @@ public class cal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_numActionPerformed
 
-    ArrayList bottom_list= new ArrayList();
-    ArrayList top_list=new ArrayList();
-    
     private void commandOperator(String comm){
         String str=bottom_display.getText();
         top_list.clear();
