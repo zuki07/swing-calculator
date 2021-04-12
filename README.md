@@ -1,4 +1,4 @@
-![Alt text](relative/path/to/background.jpg?raw=true "Background")
+![plot](.Net Beans Projects\swing_cal\src\swing_cal)
 
 # Swing Calculator
 
