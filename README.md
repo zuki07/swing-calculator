@@ -1,4 +1,4 @@
-![plot](.Net Beans Projects\swing_cal\src\swing_cal)
+<img src="https://user-images.githubusercontent.com/52359763/114473141-42636f80-9bb9-11eb-9e9f-47dfaa10c76d.png" width="15%"></img> 
 
 # Swing Calculator
 
