@@ -466,7 +466,7 @@ public class cal extends javax.swing.JFrame {
 
     private void jPanel1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel1KeyReleased
         int key=evt.getKeyChar();
-        System.out.println(key);
+//        System.out.println(key);
         switch(key){
             case 48:
                 num_0.doClick();
