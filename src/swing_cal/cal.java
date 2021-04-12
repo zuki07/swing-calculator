@@ -61,9 +61,14 @@ public class cal extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setFocusable(false);
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 400));
+        jPanel1.setFocusable(true);
+        jPanel1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jPanel1KeyReleased(evt);
+            }
+        });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         top_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
@@ -319,14 +324,10 @@ public class cal extends javax.swing.JFrame {
         jPanel1.add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 258, 130, 41));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
+        background.setFocusable(false);
         background.setMaximumSize(getPreferredSize());
         background.setMinimumSize(getPreferredSize());
         background.setOpaque(true);
-        background.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                backgroundKeyTyped(evt);
-            }
-        });
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -417,11 +418,6 @@ public class cal extends javax.swing.JFrame {
         bottom_display.setText("0");
     }//GEN-LAST:event_clearActionPerformed
 
-    private void backgroundKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_backgroundKeyTyped
-        int key=evt.getKeyCode();
-        System.out.println(key);
-    }//GEN-LAST:event_backgroundKeyTyped
-
     private void numActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformed
         Object button_pressed=evt.getSource();      //get full source of button event
         String str=button_pressed.toString();
@@ -467,6 +463,61 @@ public class cal extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_numActionPerformed
+
+    private void jPanel1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel1KeyReleased
+        int key=evt.getKeyChar();
+//        System.out.println(key);
+        switch(key){
+            case 48:
+                num_0.doClick();
+                break;
+            case 49:
+                num_1.doClick();
+                break;
+            case 50:
+                num_2.doClick();
+                break;
+            case 51:
+                num_3.doClick();
+                break;
+            case 52:
+                num_4.doClick();
+                break;
+            case 53:
+                num_5.doClick();
+                break;
+            case 54:
+                num_6.doClick();
+                break;
+            case 55:
+                num_7.doClick();
+                break;
+            case 56:
+                num_8.doClick();
+                break;
+            case 57:
+                num_9.doClick();
+                break;
+            case 43:
+                add.doClick();
+                break;
+            case 45:
+                minus.doClick();
+                break;
+            case 42:
+                mult.doClick();
+                break;
+            case 47:
+                div.doClick();
+                break;
+            case 10:
+                equals.doClick();
+                break;
+            case 99:
+                clear.doClick();
+                break;
+        }
+    }//GEN-LAST:event_jPanel1KeyReleased
 
     private void commandOperator(String comm){
         String str=bottom_display.getText();
