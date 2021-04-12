@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/52359763/114473141-42636f80-9bb9-11eb-9e9f-47dfaa10c76d.png" width="15%"></img> 
+<img src="https://user-images.githubusercontent.com/52359763/114473488-f664fa80-9bb9-11eb-929a-bfe41f81e689.png" width="15%"></img> 
 
 # Swing Calculator
 
