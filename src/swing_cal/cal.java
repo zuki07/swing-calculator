@@ -3,8 +3,6 @@
  */
 package swing_cal;
 
-import java.awt.event.KeyListener;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 /**
@@ -352,7 +350,12 @@ public class cal extends javax.swing.JFrame {
     }//GEN-LAST:event_equalsActionPerformed
 
     private void pos_negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pos_negActionPerformed
-        // TODO add your handling code here:
+        if(bottom_display.getText().startsWith("-")){
+            bottom_display.setText(bottom_display.getText().substring(1));
+        }
+        else{
+            bottom_display.setText("-"+bottom_display.getText());
+        }
     }//GEN-LAST:event_pos_negActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
