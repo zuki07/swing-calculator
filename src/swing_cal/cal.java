@@ -69,11 +69,12 @@ public class cal extends javax.swing.JFrame {
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        top_display.setBackground(new java.awt.Color(0, 0, 0));
         top_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
         top_display.setForeground(new java.awt.Color(25, 255, 25));
         top_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         top_display.setFocusable(false);
-        jPanel1.add(top_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 20, 338, 40));
+        jPanel1.add(top_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 20, 30, 40));
 
         bottom_display.setBackground(new java.awt.Color(0, 0, 0));
         bottom_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
@@ -82,7 +83,8 @@ public class cal extends javax.swing.JFrame {
         bottom_display.setText("0");
         bottom_display.setFocusable(false);
         bottom_display.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        jPanel1.add(bottom_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 70, 338, 40));
+        bottom_display.setOpaque(true);
+        jPanel1.add(bottom_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 70, 30, 40));
 
         num_6.setBackground(new java.awt.Color(0, 0, 0));
         num_6.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
