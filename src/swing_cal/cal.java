@@ -29,7 +29,6 @@ public class cal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         top_display = new javax.swing.JLabel();
-        bottom_display = new javax.swing.JLabel();
         num_6 = new javax.swing.JButton();
         num_0 = new javax.swing.JButton();
         num_7 = new javax.swing.JButton();
@@ -48,6 +47,7 @@ public class cal extends javax.swing.JFrame {
         dec = new javax.swing.JButton();
         num_5 = new javax.swing.JButton();
         equals = new javax.swing.JButton();
+        bottom_display = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,17 +74,7 @@ public class cal extends javax.swing.JFrame {
         top_display.setForeground(new java.awt.Color(25, 255, 25));
         top_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         top_display.setFocusable(false);
-        jPanel1.add(top_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 20, 30, 40));
-
-        bottom_display.setBackground(new java.awt.Color(0, 0, 0));
-        bottom_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
-        bottom_display.setForeground(new java.awt.Color(25, 255, 25));
-        bottom_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        bottom_display.setText("0");
-        bottom_display.setFocusable(false);
-        bottom_display.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        bottom_display.setOpaque(true);
-        jPanel1.add(bottom_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 70, 30, 40));
+        jPanel1.add(top_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 20, 336, 40));
 
         num_6.setBackground(new java.awt.Color(0, 0, 0));
         num_6.setFont(new java.awt.Font("Elephant", 1, 18)); // NOI18N
@@ -323,6 +313,20 @@ public class cal extends javax.swing.JFrame {
         });
         jPanel1.add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 258, 130, 41));
 
+        bottom_display.setBackground(new java.awt.Color(0, 0, 0));
+        bottom_display.setFont(new java.awt.Font("Elephant", 0, 30)); // NOI18N
+        bottom_display.setForeground(new java.awt.Color(25, 255, 25));
+        bottom_display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        bottom_display.setText("0");
+        bottom_display.setFocusable(false);
+        bottom_display.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        bottom_display.setIconTextGap(5);
+        bottom_display.setInheritsPopupMenu(false);
+        bottom_display.setMaximumSize(new java.awt.Dimension(340, 40));
+        bottom_display.setMinimumSize(new java.awt.Dimension(30, 40));
+        bottom_display.setPreferredSize(new java.awt.Dimension(30, 40));
+        jPanel1.add(bottom_display, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 70, 336, 40));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing_cal/background.jpg"))); // NOI18N
         background.setFocusable(false);
         background.setMaximumSize(getPreferredSize());
@@ -338,7 +342,7 @@ public class cal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -420,6 +424,7 @@ public class cal extends javax.swing.JFrame {
         bottom_list.clear();
         top_list.clear();
         top_display.setText("");
+        bottom_display.setPreferredSize(new java.awt.Dimension(30,40));
         bottom_display.setText("0");
     }//GEN-LAST:event_clearActionPerformed
 
@@ -537,6 +542,7 @@ public class cal extends javax.swing.JFrame {
     private void todoCommand(String command_str){
         bottom_list.add(command_str);
         String str=toString(bottom_list);
+        System.out.println(str.length());
         bottom_display.setText(str);
     }
     
